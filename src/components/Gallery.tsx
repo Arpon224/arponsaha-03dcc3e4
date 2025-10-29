@@ -5,7 +5,8 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Placeholder gallery categories - can be updated with actual images
+  // Gallery photos organized by categories - easily customizable
+  // To add your own photos: replace the image URLs with your own image paths
   const galleryCategories = [
     {
       title: 'Industrial Experience',
@@ -13,9 +14,34 @@ const Gallery = () => {
       image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&auto=format&fit=crop',
     },
     {
+      title: 'Knitting Department',
+      description: 'Knitting machines and fabric production',
+      image: 'https://images.unsplash.com/photo-1558769132-cb1aea41f9cd?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Dyeing & Finishing',
+      description: 'Color processing and quality control',
+      image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Quality Testing',
+      description: 'Laboratory testing and analysis',
+      image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop',
+    },
+    {
       title: 'University Projects',
       description: 'Academic projects and research work',
       image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Thesis Research',
+      description: 'Sustainable textile dyeing research',
+      image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Campus Life',
+      description: 'University activities and events',
+      image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop',
     },
     {
       title: 'Art & Photography',
@@ -23,19 +49,44 @@ const Gallery = () => {
       image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop',
     },
     {
-      title: 'Events & Activities',
-      description: 'Leadership events and cultural programs',
+      title: 'Cultural Programs',
+      description: 'Event management and performances',
+      image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Leadership Events',
+      description: 'BUTEX Cultural Society activities',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop',
     },
     {
-      title: 'Textile Production',
-      description: 'Knitting, dyeing, and testing processes',
-      image: 'https://images.unsplash.com/photo-1558769132-cb1aea41f9cd?w=800&auto=format&fit=crop',
+      title: 'Team Collaboration',
+      description: 'Group projects and teamwork',
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Workshops & Training',
+      description: 'Professional development sessions',
+      image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Textile Machinery',
+      description: 'Industrial equipment and technology',
+      image: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Fabric Samples',
+      description: 'Different textile materials and designs',
+      image: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&auto=format&fit=crop',
     },
     {
       title: 'Achievements',
       description: 'Awards and recognition',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop',
+    },
+    {
+      title: 'Certifications',
+      description: 'Professional certificates and training',
+      image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop',
     },
   ];
 
