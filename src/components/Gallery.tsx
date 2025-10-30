@@ -1,77 +1,49 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
+// Import industrial experience images
+import knittingMachine from '@/assets/gallery/industrial-knitting-machine.jpg';
+import defectClassification from '@/assets/gallery/industrial-defect-classification.jpg';
+import dyeingMachine from '@/assets/gallery/industrial-dyeing-machine.jpg';
+import factoryFloor from '@/assets/gallery/industrial-factory-floor.jpg';
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Gallery photos organized by categories - easily customizable
-  // To add your own photos: replace the image URLs with your own image paths
-  const galleryCategories = [{
-    title: 'Industrial Experience',
-    description: 'Work experience at JK Knit Composite Ltd',
-    image: '"C:\Users\Asus\Downloads\Compressed\portfolio\WhatsApp Image 2025-10-29 at 02.05.46_af6a4e99.jpg"auto=format&fit=crop'
-  }, {
-    title: 'Knitting Department',
-    description: 'Knitting machines and fabric production',
-    image: 'https://images.unsplash.com/photo-1558769132-cb1aea41f9cd?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Dyeing & Finishing',
-    description: 'Color processing and quality control',
-    image: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Quality Testing',
-    description: 'Laboratory testing and analysis',
-    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop'
-  }, {
-    title: 'University Projects',
-    description: 'Academic projects and research work',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Thesis Research',
-    description: 'Sustainable textile dyeing research',
-    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Campus Life',
-    description: 'University activities and events',
-    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Art & Photography',
-    description: 'Creative works from ARTEX club',
-    image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Cultural Programs',
-    description: 'Event management and performances',
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Leadership Events',
-    description: 'BUTEX Cultural Society activities',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Team Collaboration',
-    description: 'Group projects and teamwork',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Workshops & Training',
-    description: 'Professional development sessions',
-    image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Textile Machinery',
-    description: 'Industrial equipment and technology',
-    image: 'https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Fabric Samples',
-    description: 'Different textile materials and designs',
-    image: 'https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Achievements',
-    description: 'Awards and recognition',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop'
-  }, {
-    title: 'Certifications',
-    description: 'Professional certificates and training',
-    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop'
-  }];
-  return <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8">
+  // Gallery organized by sections - easily customizable
+  // To add more photos: import your images and add them to the appropriate section
+  const gallerySections = {
+    'Industrial Experience': [
+      { name: 'Circular Knitting Machine', image: knittingMachine },
+      { name: 'Defect Classification Board', image: defectClassification },
+      { name: 'Industrial Dyeing Equipment', image: dyeingMachine },
+      { name: 'Factory Production Floor', image: factoryFloor },
+    ],
+    'University Projects': [
+      // Add your university project photos here
+      { name: 'Project 1', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&auto=format&fit=crop' },
+    ],
+    'Club Activities': [
+      // Add your club activity photos here
+      { name: 'Activity 1', image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop' },
+    ],
+    'Certifications': [
+      // Add your certification photos here
+      { name: 'Certificate 1', image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop' },
+    ],
+    'Campus Life': [
+      // Add your campus life photos here
+      { name: 'Campus Event 1', image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop' },
+    ],
+    'Art & Photography': [
+      // Add your art and photography photos here
+      { name: 'Artwork 1', image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop' },
+    ],
+  };
+  return (
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -83,26 +55,53 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {galleryCategories.map((category, index) => <Card key={index} className="group cursor-pointer overflow-hidden border-border hover:border-primary transition-all duration-300 animate-fade-in" onClick={() => setSelectedImage(category.image)}>
-              <div className="relative aspect-video overflow-hidden">
-                <img src={category.image} alt={category.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-                
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-xl font-bold text-foreground mb-1">{category.title}</h3>
-                  <p className="text-sm text-muted-foreground">{category.description}</p>
-                </div>
+        <Tabs defaultValue="Industrial Experience" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8 h-auto gap-2">
+            {Object.keys(gallerySections).map((section) => (
+              <TabsTrigger key={section} value={section} className="text-xs sm:text-sm">
+                {section}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+          {Object.entries(gallerySections).map(([sectionName, photos]) => (
+            <TabsContent key={sectionName} value={sectionName} className="mt-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {photos.map((photo, index) => (
+                  <Card
+                    key={index}
+                    className="group cursor-pointer overflow-hidden border-border hover:border-primary transition-all duration-300 animate-fade-in"
+                    onClick={() => setSelectedImage(photo.image)}
+                  >
+                    <div className="relative aspect-square overflow-hidden">
+                      <img
+                        src={photo.image}
+                        alt={photo.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <div className="p-4 bg-card">
+                      <h3 className="text-sm font-semibold text-foreground text-center">
+                        {photo.name}
+                      </h3>
+                    </div>
+                  </Card>
+                ))}
               </div>
-            </Card>)}
-        </div>
+            </TabsContent>
+          ))}
+        </Tabs>
 
         {/* Lightbox Dialog */}
         <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-          <DialogContent className="max-w-4xl p-0 border-primary">
-            {selectedImage}
+          <DialogContent className="max-w-4xl p-2">
+            <img src={selectedImage || ''} alt="Gallery preview" className="w-full h-auto" />
           </DialogContent>
         </Dialog>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default Gallery;
