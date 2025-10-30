@@ -20,6 +20,18 @@ import culturalEvent from '@/assets/gallery/club-cultural-event.jpg';
 import literatureFest from '@/assets/gallery/club-literature-fest.jpg';
 import outdoorEvent from '@/assets/gallery/club-outdoor-event.jpeg';
 import culturalCelebration from '@/assets/gallery/club-cultural-celebration.jpg';
+import filmFestAward1 from '@/assets/gallery/club-film-fest-award-1.jpg';
+import filmFestGroup from '@/assets/gallery/club-film-fest-group.jpg';
+import filmFestAward2 from '@/assets/gallery/club-film-fest-award-2.jpg';
+import filmScreening from '@/assets/gallery/club-film-screening.jpg';
+import poetryCircle from '@/assets/gallery/club-poetry-circle.jpg';
+import theatreGroup from '@/assets/gallery/club-theatre-group.jpg';
+
+// Import art & photography images
+import artPhoto4 from '@/assets/gallery/art-photo-4.jpg';
+import artPhoto5 from '@/assets/gallery/art-photo-5.jpg';
+import artSunset from '@/assets/gallery/art-sunset-photo.jpg';
+import artIllustration from '@/assets/gallery/art-illustration.jpg';
 
 // Import certification images
 import certGraphics from '@/assets/gallery/cert-graphics-design.png';
@@ -58,6 +70,12 @@ const Gallery = () => {
       { name: 'BUTEX Literature Fest', image: literatureFest },
       { name: 'Outdoor Club Gathering', image: outdoorEvent },
       { name: 'Cultural Celebration', image: culturalCelebration },
+      { name: 'Film Festival Award Ceremony', image: filmFestAward1 },
+      { name: 'Film Festival Group Photo', image: filmFestGroup },
+      { name: 'Film Festival Achievement', image: filmFestAward2 },
+      { name: 'Film Screening Event', image: filmScreening },
+      { name: 'Poetry Circle Discussion', image: poetryCircle },
+      { name: 'Theatre Group Performance', image: theatreGroup },
     ],
     'Certifications': [
       { name: 'Graphics Design Certificate', image: certGraphics },
@@ -74,8 +92,10 @@ const Gallery = () => {
       { name: 'Traditional Gathering', image: campusTraditional },
     ],
     'Art & Photography': [
-      // Add your art and photography photos here
-      { name: 'Artwork 1', image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop' },
+      { name: 'Nature Photography', image: artPhoto4 },
+      { name: 'Landscape Photography', image: artPhoto5 },
+      { name: 'Golden Sunset Capture', image: artSunset },
+      { name: 'Digital Illustration', image: artIllustration },
     ],
   };
   return (
