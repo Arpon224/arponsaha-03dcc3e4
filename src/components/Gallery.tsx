@@ -21,6 +21,20 @@ import literatureFest from '@/assets/gallery/club-literature-fest.jpg';
 import outdoorEvent from '@/assets/gallery/club-outdoor-event.jpeg';
 import culturalCelebration from '@/assets/gallery/club-cultural-celebration.jpg';
 
+// Import certification images
+import certGraphics from '@/assets/gallery/cert-graphics-design.png';
+import certHpDataScience from '@/assets/gallery/cert-hp-data-science.png';
+import certHrProfessional from '@/assets/gallery/cert-hr-professional.png';
+import certLeanManufacturing from '@/assets/gallery/cert-lean-manufacturing.png';
+import certMicrosoftOffice from '@/assets/gallery/cert-microsoft-office.png';
+
+// Import campus life images
+import campusGroup from '@/assets/gallery/campus-group-photo.jpg';
+import campusCulturalFrame from '@/assets/gallery/campus-cultural-frame.jpg';
+import campusFormalGroup from '@/assets/gallery/campus-formal-group.jpg';
+import campusMovieWall from '@/assets/gallery/campus-movie-wall.jpg';
+import campusTraditional from '@/assets/gallery/campus-traditional-gathering.jpg';
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -46,12 +60,18 @@ const Gallery = () => {
       { name: 'Cultural Celebration', image: culturalCelebration },
     ],
     'Certifications': [
-      // Add your certification photos here
-      { name: 'Certificate 1', image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop' },
+      { name: 'Graphics Design Certificate', image: certGraphics },
+      { name: 'HP Data Science & Analytics', image: certHpDataScience },
+      { name: 'Global HR Professional', image: certHrProfessional },
+      { name: 'Lean Manufacturing (ITC)', image: certLeanManufacturing },
+      { name: 'Microsoft Office Starter', image: certMicrosoftOffice },
     ],
     'Campus Life': [
-      // Add your campus life photos here
-      { name: 'Campus Event 1', image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop' },
+      { name: 'Traditional Day Group Photo', image: campusGroup },
+      { name: 'Cultural Photo Frame', image: campusCulturalFrame },
+      { name: 'Formal Group Photo', image: campusFormalGroup },
+      { name: 'Movie Wall Gathering', image: campusMovieWall },
+      { name: 'Traditional Gathering', image: campusTraditional },
     ],
     'Art & Photography': [
       // Add your art and photography photos here
