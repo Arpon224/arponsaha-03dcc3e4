@@ -61,11 +61,24 @@ const About = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="text-muted-foreground">
-              <p className="leading-relaxed text-lg">
-                To build a dynamic career in the global textile and apparel industry, where I can apply my technical 
-                expertise in production, merchandising, and supply chain optimization while continuously developing 
-                innovative and sustainable solutions that create measurable business value.
-              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">▸</span>
+                  <span className="leading-relaxed">Build a dynamic career in the global textile and apparel industry</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">▸</span>
+                  <span className="leading-relaxed">Apply technical expertise in production, merchandising, and supply chain optimization</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">▸</span>
+                  <span className="leading-relaxed">Continuously develop innovative and sustainable solutions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">▸</span>
+                  <span className="leading-relaxed">Create measurable business value through strategic initiatives</span>
+                </li>
+              </ul>
             </CardContent>
           </Card>
         </div>
