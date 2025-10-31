@@ -49,12 +49,12 @@ const Hero = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
+          <div className="relative animate-fade-in flex justify-center lg:justify-end">
+            <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl w-80 h-80 lg:w-96 lg:h-96">
               <img 
                 src={profilePhoto} 
                 alt="Arpon Saha - Textile Engineer" 
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
