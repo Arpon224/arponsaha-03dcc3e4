@@ -4,52 +4,52 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 const Hero = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-6 animate-slide-in">
-            <div className="inline-block">
-              <span className="px-4 py-2 bg-primary/10 border border-primary text-primary rounded-full text-sm font-medium">
-                Textile Engineer
-              </span>
+        <div className="space-y-6 animate-slide-in">
+          <div className="inline-block">
+            <span className="px-4 py-2 bg-primary/10 border border-primary text-primary rounded-full text-sm font-medium">
+              Textile Engineer
+            </span>
+          </div>
+
+          <div className="flex items-center gap-8 flex-col sm:flex-row">
+            <div className="flex-1">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
+                <span className="text-foreground">ARPON </span>
+                <span className="text-primary">SAHA</span>
+              </h1>
             </div>
-
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
-              <span className="text-foreground">ARPON </span>
-              <span className="text-primary">SAHA</span>
-            </h1>
-
-            <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-              A technically skilled and management-focused Textile Engineering graduate with hands-on industrial experience 
-              in knit production, dyeing, testing, and merchandising coordination.
-            </p>
-
-            <div className="flex gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
-                <Mail className="mr-2 h-5 w-5" />
-                Get In Touch
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => document.getElementById('experience')?.scrollIntoView({
-              behavior: 'smooth'
-            })}>
-                View Experience
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-                <a href="/Arpon_Saha_Resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Resume
-                </a>
-              </Button>
+            
+            <div className="relative animate-fade-in">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl w-48 h-48 sm:w-56 sm:h-56">
+                <img 
+                  src={profilePhoto} 
+                  alt="Arpon Saha - Textile Engineer" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
 
-          {/* Right Image */}
-          <div className="relative animate-fade-in flex justify-center lg:justify-end">
-            <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl w-80 h-80 lg:w-96 lg:h-96">
-              <img 
-                src={profilePhoto} 
-                alt="Arpon Saha - Textile Engineer" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+            A technically skilled and management-focused Textile Engineering graduate with hands-on industrial experience 
+            in knit production, dyeing, testing, and merchandising coordination.
+          </p>
+
+          <div className="flex gap-4 pt-4 flex-wrap">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-medium">
+              <Mail className="mr-2 h-5 w-5" />
+              Get In Touch
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" onClick={() => document.getElementById('experience')?.scrollIntoView({
+              behavior: 'smooth'
+            })}>
+              View Experience
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+              <a href="/Arpon_Saha_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
+            </Button>
           </div>
         </div>
       </div>
