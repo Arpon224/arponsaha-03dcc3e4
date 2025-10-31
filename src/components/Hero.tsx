@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Phone, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-image.jpeg';
+import profilePhoto from '@/assets/profile-photo.jpg';
 const Hero = () => {
   return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="container mx-auto">
@@ -51,8 +51,11 @@ const Hero = () => {
           {/* Right Image */}
           <div className="relative animate-fade-in">
             <div className="relative rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
-              
-              
+              <img 
+                src={profilePhoto} 
+                alt="Arpon Saha - Textile Engineer" 
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
         </div>
