@@ -32,7 +32,7 @@ const Education = () => {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
+    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
