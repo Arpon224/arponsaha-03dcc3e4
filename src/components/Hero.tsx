@@ -7,11 +7,11 @@ const Hero = () => {
         <div className="space-y-3 animate-slide-in">
           <div className="flex items-center gap-12 flex-col sm:flex-row">
             <div className="flex-1">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-2">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4">
                 <span className="text-foreground">ARPON </span>
                 <span className="text-primary">SAHA</span>
               </h1>
-              <div className="inline-block mb-3">
+              <div className="inline-block mb-6">
                 <span className="px-4 py-2 bg-primary/10 border border-primary text-primary rounded-full text-sm font-medium">
                   Textile Engineer
                 </span>
